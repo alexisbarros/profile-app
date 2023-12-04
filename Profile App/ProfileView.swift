@@ -14,6 +14,11 @@ struct User {
     var follows: String
 }
 
+//MARK: ModelView
+class ProfileModelView {
+    
+}
+
 //MARK: View
 struct ProfileView: View {
     var body: some View {
