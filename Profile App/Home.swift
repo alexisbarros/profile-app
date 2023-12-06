@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Profile_AppApp: App {
+struct Home: App {
     var body: some Scene {
         WindowGroup {
             ProfileView()

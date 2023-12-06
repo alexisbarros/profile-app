@@ -1,38 +1,12 @@
 //
-//  ContentView.swift
+//  ProfileView.swift
 //  Profile App
 //
-//  Created by Alexis Barros on 04/12/23.
+//  Created by Alexis Barros on 06/12/23.
 //
 
 import SwiftUI
 
-//MARK: Model
-struct User {
-    var profilePhoto: String
-    var name: String
-    var github: String
-    var followers: Int
-}
-
-//MARK: ModelView
-class ProfileViewModel: ObservableObject {
-    
-    @Published var user = User(profilePhoto: "profile_photo",
-                   name: "Alexis de Barros",
-                   github: "alexisbarros",
-                               followers: 8)
-    
-    @Published var isFollowing: Bool = false
-    
-    func toggleFollow(){
-        user.followers += (isFollowing ? -1:1)
-        isFollowing.toggle()
-    }
-    
-}
-
-//MARK: View
 struct ProfileView: View {
     @StateObject var viewModel = ProfileViewModel()
     
